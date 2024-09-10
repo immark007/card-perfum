@@ -1,0 +1,156 @@
+@import url('base/global.css');
+@import url('base/reset.css');
+
+#main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-white);
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.img-desktop img{
+    width: 300px;
+    max-width: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container-conteudo{
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-conteudo .perfum{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-paragraph);
+}
+
+.container-conteudo .container-title h2{
+    font-size: 37px;
+    font-family: Fraunces;
+    line-height: 35px;
+    color: var(--color-title);
+    margin-bottom: 20px;
+}
+
+.container-conteudo .container-title p{
+    color: var(--color-paragraph);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.container-conteudo .price{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container-conteudo .price h2{
+    font-size: 35px;
+    font-family: Fraunces;
+    color: var(--color-price);
+}
+
+.container-conteudo .price span{
+    text-decoration: line-through;
+    color: var(--color-paragraph);
+    font-weight: 500;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+
+.button{
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--color-price);
+    border-radius: 10px;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.button a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.button:hover{
+    background-color: hsl(159, 85%, 16%);
+}
+
+.button:active{
+    background-color: hsl(159, 85%, 16%);
+}
+
+.img-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 730px) {
+    .container{
+        width: 340px;
+        flex-direction: column;
+    }
+
+    .container-conteudo{
+        gap: 14px;
+        padding: 20px 25px;
+    }
+
+    .container-conteudo .container-title h2{
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    .img-desktop img{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .img-mobile img{
+        border-radius: 10px 10px 0px 0px;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .container-conteudo .price{
+        margin-top: 5px;
+    }
+    .container-conteudo .price h2{
+        font-size: 30px;
+    }
+
+    .button{
+        margin-top: 0px;
+    }
+}
